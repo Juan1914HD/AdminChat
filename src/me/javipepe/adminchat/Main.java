@@ -48,10 +48,11 @@ public final class Main
                     for (int i = 0; i < j; i++)
                     {
                         Player player = arrayOfPlayer[i];
+                        Player s = (Player) sender
                         Location location = player.getLocation();
                         if (player.isOp())
                         {
-                            player.sendMessage(ChatColor.WHITE + "[" + ChatColor.GOLD + "A" + ChatColor.WHITE + "]" + ChatColor.WHITE + " [" + ChatColor.GOLD + "world1" + ChatColor.WHITE + "] " + ChatColor.DARK_AQUA + sender.getName() + ChatColor.YELLOW + ": " + ReportReson);
+                            player.sendMessage(ChatColor.WHITE + "[" + ChatColor.GOLD + "A" + ChatColor.WHITE + "]" + ChatColor.WHITE + " [" + ChatColor.GOLD + "world1" + ChatColor.WHITE + "] " + ChatColor.DARK_AQUA + s.getDisplayName() + ChatColor.YELLOW + ": " + ReportReson);
                             player.playSound(location, Sound.NOTE_BASS_GUITAR, 1.0F, 0.0F);
                         }
                     }
