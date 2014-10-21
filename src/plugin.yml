@@ -1,0 +1,6 @@
+name: AdminChat
+main: me.javipepe.adminchat.Main
+version: 1.0
+commands:
+    a:
+        description: Admin channel! Only ops can use it! (/a chat <message>)
