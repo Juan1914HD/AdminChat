@@ -1,4 +1,4 @@
-AdminChat (Download coming soon!)
+AdminChat (Download on "Releases" tab!)
 =========
 
 Overcast Network's AdminChat!
