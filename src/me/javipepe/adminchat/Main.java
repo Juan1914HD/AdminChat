@@ -16,10 +16,12 @@ public final class Main
     public void onEnable()
     {
         getLogger().info("[AdminChat] Enabled");
+        getLogger().info("[AdminChat] Enabled");
     }
 
     public void onDisable()
     {
+        getLogger().info("[AdminChat] Disabled");
         getLogger().info("[AdminChat] Disabled");
     }
 
@@ -28,7 +30,7 @@ public final class Main
         if (cmd.getName().equalsIgnoreCase("a"))
         {
             if (sender.isOp()) {
-                if (args.length < 2)
+                if (args.length < 1)
                 {
                     sender.sendMessage(ChatColor.RED + "Usage: /a chat [message]");
                 }
@@ -52,13 +54,13 @@ public final class Main
                         Location location = player.getLocation();
                         if (player.isOp())
                         {
-                            player.sendMessage(ChatColor.WHITE + "[" + ChatColor.GOLD + "A" + ChatColor.WHITE + "]" + ChatColor.WHITE + " [" + ChatColor.GOLD + "world1" + ChatColor.WHITE + "] " + ChatColor.DARK_AQUA + s.getDisplayName() + ChatColor.YELLOW + ": " + ReportReson);
+                            player.sendMessage(ChatColor.WHITE + "[" + ChatColor.GOLD + "AdminChat" + ChatColor.WHITE + "]" + ChatColor.WHITE + " [" + ChatColor.GOLD + "world1" + ChatColor.WHITE + "] " + ChatColor.DARK_AQUA + s.getDisplayName() + ChatColor.YELLOW + ": " + ReportReson);
                             player.playSound(location, Sound.NOTE_BASS_GUITAR, 1.0F, 0.0F);
                         }
                     }
                 }
             }else{
-                sender.sendMessage(ChatColor.RED + "You don´t have permission to use adminchat!");
+                sender.sendMessage(ChatColor.RED + "You don´t have permission!");
                 return false;
             }
             return true;
